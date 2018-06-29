@@ -1,0 +1,19 @@
+
+@import './helpers/variables';
+@import './helpers/placeholders.scss';
+@import './helpers/mixins';
+@import './fonts';
+@import './normalize';
+@import './base';
+
+/*
+  Components
+*/
+@import "./components/header";
+@import "./components/about";
+@import "./components/team";
+@import "./components/work";
+@import "./components/services";
+@import "./components/features";
+@import "./components/contact";
+@import "./components/footer";

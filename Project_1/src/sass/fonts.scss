@@ -1,0 +1,32 @@
+/* Open Sans - regular - latin */
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../fonts/OpenSans/open-sans-v15-latin-regular.woff2') format('woff2'),
+    url('../fonts/OpenSans/open-sans-v15-latin-regular.woff') format('woff'),
+    url('../fonts/OpenSans/open-sans-v15-latin-regular.ttf') format('ttf'),
+    url('../fonts/OpenSans/open-sans-v15-latin-regular.eot') format('eot'),
+}
+
+/* Open Sans - SemiBold - latin */
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 600;
+  src: url('../fonts/OpenSans/open-sans-v15-latin-600.woff2') format('woff2'),
+    url('../fonts/OpenSans/open-sans-v15-latin-600.woff') format('woff'),
+    url('../fonts/OpenSans/open-sans-v15-latin-600.ttf') format('ttf'),
+    url('../fonts/OpenSans/open-sans-v15-latin-600.eot') format('eot'),
+}
+
+/* Quattrocento Sans - Bold - latin */
+@font-face {
+  font-family: 'Quattrocento Sans';
+  font-style: normal;
+  font-weight: 700;
+  src: url('../fonts/QuattrocentoSans/quattrocento-sans-v10-latin-700.woff2') format('woff2'),
+    url('../fonts/QuattrocentoSans/quattrocento-sans-v10-latin-700.woff') format('woff'),
+    url('../fonts/QuattrocentoSans/quattrocento-sans-v10-latin-700.ttf') format('ttf'),
+    url('../fonts/QuattrocentoSans/quattrocento-sans-v10-latin-700.eot') format('eot'),
+}
