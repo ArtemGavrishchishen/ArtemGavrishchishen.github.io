@@ -10,6 +10,7 @@
   Components
 */
 @import "./components/header";
+@import "./components/banner";
 @import "./components/about";
 @import "./components/team";
 @import "./components/work";
@@ -17,3 +18,7 @@
 @import "./components/features";
 @import "./components/contact";
 @import "./components/footer";
+
+* {
+  outline: 1px solid red;
+}

@@ -1,0 +1,68 @@
+.header {
+  background-color: $menu-bg-color;
+}
+
+.header__menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+}
+
+.menu__logo {
+  @extend %link;
+  font-family: $title-font;
+  font-size: 22px;
+  color: $secondary-title-color;
+  transition: color 0.2s linear;
+
+  span {
+    font-size: 17px;
+    vertical-align: top;
+    border-bottom: 1px solid $primary-bg-color;
+    transition: border-color 0.2s linear;
+  }
+
+  &:hover {
+    color: $accent-color;
+
+    span {
+      border-color: $accent-color;
+    }
+  }
+}
+
+.menu__list {
+  @extend %list;
+  display: flex;
+}
+
+.menu__item {
+  &:not(:last-child) {
+    margin-right: 15px;
+  }
+}
+
+.menu__link {
+  @extend %link;
+  font-family: $text-font;
+  font-size: 14px;
+  font-weight: 600;
+  color: $menu-color;
+  text-transform: uppercase;
+  padding: 6px;
+  border: 2px solid transparent;
+  border-radius: 5px;
+  transition-property: border-color, color;
+  transition-duration: 0.2s;
+  transition-timing-function: linear;
+
+  &:hover {
+    border-color: $menu-color;
+  }
+
+  &:active {
+    border-color: $accent-color;
+    color: $accent-color;
+  }
+}
