@@ -1,11 +1,38 @@
+.team {
+  margin-bottom: 30px;
+
+  @media (min-width: 768px) {
+    margin-bottom: 100px;
+  }
+}
+
 .team__title {
+  position: relative;
   font-family: $title-font;
   font-size: 36px;
   line-height: 42px;
   text-transform: uppercase;
   color: $primary-title-color;
   margin: 0;
+  margin-bottom: 30px;
   padding: 0;
+  padding-left: 25px;;
+
+  &::after {
+    display: block;
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    width: 10px;
+    height: 35px;
+    background-color: $secondary-bg-color1;
+  }
+
+  @media (min-width: 768px) {
+    margin-bottom: 60px;
+  }
 }
 
 .team__list {
@@ -23,8 +50,23 @@
 }
 
 .team__item {
+  position: relative;
   width: 260px;
   background-color: $secondary-bg-color1;
+  transition: background-color 0.2s linear;
+
+  &:hover .overlay {
+    opacity: 1;
+    background-color: rgba(255, 255, 255, 0.4);
+  }
+
+  &:hover {
+    background-color: $secondary-bg-color2;
+  }
+
+  &:hover .team__name, &:hover .team__position {
+    color: $secondary-title-color;
+  }
 
   @media (max-width: 767px) {
     margin: 0 auto;
@@ -66,3 +108,47 @@
   padding: 0;
   padding-left: 20px;
 }
+
+.overlay {
+  position: absolute;
+  width: 100%;
+  height: 300px;
+  top: 0;
+  opacity: 0;
+  background-color: rgba(255, 255, 255, 0);
+  transition-property: opacity, background-color;
+  transition-duration: 0.2s;
+  transition-timing-function: linear;
+}
+
+.overlay__list {
+  @extend %list;
+  display: flex;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.overlay__item {
+  &:not(:last-child) {
+    margin-right: 2px;
+  }
+}
+
+.overlay__link {
+  @extend %link;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: $secondary-bg-color2;
+  fill: $secondary-title-color;
+  transition: fill 0.2s linear;
+
+  &:hover {
+    fill: $accent-color;
+  }
+}
+

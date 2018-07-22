@@ -1,10 +1,14 @@
-.menu__link {
+.menu__link,
+.overlay__link,
+.footer__link {
   display: block;
   text-decoration: none;
 }
 
 .menu__list,
-.team__list {
+.team__list,
+.overlay__list,
+.footer__list {
   margin: 0;
   padding: 0;
   list-style: none;
@@ -430,7 +434,7 @@ img {
   min-width: 320px;
 }
 
-.visually-hidden :not(:focus) :not(:active),
+.visually-hidden:not(:focus):not(:active),
 input[type="checkbox"].visually-hidden,
 input[type="radio"].visually-hidden {
   position: absolute;
@@ -452,6 +456,7 @@ input[type="radio"].visually-hidden {
 
 .header {
   background-color: #1d2126;
+  margin-bottom: 30px;
 }
 
 .header__menu {
@@ -488,13 +493,17 @@ input[type="radio"].visually-hidden {
   text-align: center;
 }
 
+.menu__item:first-child {
+  margin-top: 15px;
+}
+
 .menu__link {
   font-family: "Open Sans", sans-serif;
-  font-size: 14px;
+  font-size: 18px;
   font-weight: 600;
   color: #a4aead;
   text-transform: uppercase;
-  padding: 6px;
+  padding: 10px;
   border: 2px solid transparent;
   border-radius: 5px;
   transition-property: border-color, color;
@@ -514,22 +523,58 @@ input[type="radio"].visually-hidden {
 .menu__link--trigger {
   position: absolute;
   right: 0;
-  margin-top: -30px;
+  margin-top: -35px;
+}
+
+.team {
+  margin-bottom: 30px;
 }
 
 .team__title {
+  position: relative;
   font-family: "Quattrocento Sans", sans-serif;
   font-size: 36px;
   line-height: 42px;
   text-transform: uppercase;
   color: #292f36;
   margin: 0;
+  margin-bottom: 30px;
   padding: 0;
+  padding-left: 25px;
+}
+
+.team__title::after {
+  display: block;
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+  width: 10px;
+  height: 35px;
+  background-color: #e1e6ea;
 }
 
 .team__item {
+  position: relative;
   width: 260px;
   background-color: #e1e6ea;
+  transition: background-color 0.2s linear;
+}
+
+.team__item:hover .overlay {
+  opacity: 1;
+  background-color: rgba(255, 255, 255, 0.4);
+}
+
+.team__item:hover {
+  background-color: #3a454d;
+}
+
+.team__item:hover .team__name,
+.team__item:hover .team__position {
+  color: #ffffff;
 }
 
 .team__item:not(:last-child) {
@@ -556,13 +601,93 @@ input[type="radio"].visually-hidden {
   padding-left: 20px;
 }
 
-* {
-  outline: 1px solid red;
+.overlay {
+  position: absolute;
+  width: 100%;
+  height: 300px;
+  top: 0;
+  opacity: 0;
+  background-color: rgba(255, 255, 255, 0);
+  transition-property: opacity, background-color;
+  transition-duration: 0.2s;
+  transition-timing-function: linear;
+}
+
+.overlay__list {
+  display: flex;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+.overlay__item:not(:last-child) {
+  margin-right: 2px;
+}
+
+.overlay__link {
+  width: 50px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #3a454d;
+  fill: #ffffff;
+  transition: fill 0.2s linear;
+}
+
+.overlay__link:hover {
+  fill: #23b7a4;
+}
+
+.footer {
+  background-color: #3a454d;
+  padding: 35px 0;
+}
+
+.footer__text {
+  font-family: "Open Sans", sans-serif;
+  font-size: 14px;
+  line-height: 26px;
+  color: #ffffff;
+  text-align: center;
+  margin: 0;
+  margin-bottom: 25px;
+}
+
+.footer__list {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer__item {
+  width: 25px;
+  height: 25px;
+}
+
+.footer__item:not(:last-child) {
+  margin-right: 20px;
+}
+
+.footer__link {
+  font-size: 0;
+  fill: #ffffff;
+  transition: fill 0.2s linear;
+}
+
+.footer__link:hover {
+  fill: #23b7a4;
 }
 
 @media (min-width: 768px) {
   .container {
     max-width: 748px;
+  }
+
+  .header {
+    margin-bottom: 0;
   }
 
   .header__menu {
@@ -575,12 +700,29 @@ input[type="radio"].visually-hidden {
     display: flex;
   }
 
+  .menu__item:first-child {
+    margin-top: 0;
+  }
+
   .menu__item:not(:last-child) {
     margin-right: 15px;
   }
 
+  .menu__link {
+    font-size: 14px;
+    padding: 6px;
+  }
+
   .menu__link--trigger {
     display: none;
+  }
+
+  .team {
+    margin-bottom: 100px;
+  }
+
+  .team__title {
+    margin-bottom: 60px;
   }
 
   .team__list {
@@ -591,6 +733,19 @@ input[type="radio"].visually-hidden {
 
   .team__item:nth-last-child(-n + 2) {
     margin-bottom: 0px;
+  }
+
+  .footer__content {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .footer__text {
+    margin-bottom: 0;
+  }
+
+  .footer__item:not(:last-child) {
+    margin-right: 12px;
   }
 }
 
