@@ -3,14 +3,19 @@
 }
 
 .header__menu {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 15px;
+  position: relative;
+  padding: 15px 0;
+
+  @media (min-width: 768px) {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
 }
 
 .menu__logo {
-  @extend %link;
+  text-decoration: none;
+  display: inline-block;
   font-family: $title-font;
   font-size: 22px;
   color: $secondary-title-color;
@@ -34,12 +39,20 @@
 
 .menu__list {
   @extend %list;
-  display: flex;
+  display: none;
+  text-align: center;
+
+  @media (min-width: 768px) {
+    display: flex;
+  }
 }
 
 .menu__item {
-  &:not(:last-child) {
-    margin-right: 15px;
+
+  @media (min-width: 768px) {
+    &:not(:last-child) {
+      margin-right: 15px;
+    }
   }
 }
 
@@ -64,5 +77,15 @@
   &:active {
     border-color: $accent-color;
     color: $accent-color;
+  }
+
+  &--trigger {
+    position: absolute;
+    right: 0;
+    margin-top: -30px;
+
+    @media (min-width: 768px) {
+      display: none;
+    }
   }
 }

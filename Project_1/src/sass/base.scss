@@ -17,11 +17,22 @@ img {
 }
 
 .container {
-  width: 1170px;
   margin: 0 auto;
+  padding: 0 15px;
+  min-width: 320px;
+
+  @media (min-width: 768px) {
+    max-width: 748px;
+  }
+
+  @media (min-width: 1200px) {
+    max-width: 1140px;
+  }
 }
 
-.visually-hidden:not(:focus):not(:active),
+.visually-hidden
+:not(:focus)
+:not(:active),
 input[type="checkbox"].visually-hidden,
 input[type="radio"].visually-hidden {
   position: absolute;

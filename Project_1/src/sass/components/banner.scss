@@ -1,70 +1,66 @@
-.banner {
-  background-color: $secondary-bg-color;
-}
+// .banner {
+//   background-color: $secondary-bg-color;
+// }
 
-.slider {
-  width: 100%;
-  height: 660px;
-}
+// .slider {
+//   width: 100%;
+//   height: 660px;
+//   position: relative;
+// }
 
-.slider__list {
-  @extend %list;
-}
+// .slider__list {
+//   @extend %list;
+// }
 
-.slider__item {
-  position: relative;
-}
+// .slider__img {
+//   position: absolute;
+//   opacity: 0.55;
+//   left: 50%;
+//   transform: translateX(-50%);
+// }
 
-.slider__img {
-  opacity: 0.55;
-}
+// .slider__description {
+//   height: 100%;
+// }
 
-.slider__description {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 50%;
-  transform: translateX(-50%);
-}
+// .slider__title {
+//   font-family: $title-font;
+//   color: $secondary-title-color;
+//   font-size: 36px;
+//   text-transform: uppercase;
+//   margin: 0;
+//   padding: 0;
+// }
 
-.slider__title {
-  font-family: $title-font;
-  color: $secondary-title-color;
-  font-size: 36px;
-  text-transform: uppercase;
-  margin: 0;
-  padding: 0;
-}
+// .slider__text {
+//   font-family: $text-font;
+//   color: $secondary-text-color1;
+//   font-size: 16px;
+//   width: 650px;
+//   margin: 0;
+//   padding: 0;
+// }
 
-.slider__text {
-  font-family: $text-font;
-  color: $secondary-text-color1;
-  font-size: 16px;
-  width: 650px;
-  margin: 0;
-  padding: 0;
-}
+// .pagination__list {
+//   @extend %list;
+//   display: flex;
+// }
 
-.pagination__list {
-  @extend %list;
-  display: flex;
-}
+// .pagination__item {
+//   width: 13px;
+//   height: 13px;
+//   border: 2px solid $primary-bg-color;
+//   border-radius: 50%;
 
-.pagination__item {
-  width: 13px;
-  height: 13px;
-  border: 2px solid $primary-bg-color;
-  border-radius: 50%;
+//   &:not(:last-child) {
+//     margin-right: 10px;
+//   }
 
-  &:not(:last-child) {
-    margin-right: 10px;
-  }
+//   &:first-child {
+//     margin-left: auto;
+//   }
 
-  &:first-child {
-    margin-left: auto;
-  }
-
-  &--active {
-    background-color: $primary-bg-color;
-  }
-}
+//   &--active {
+//     background-color: $primary-bg-color;
+//   }
+// }
