@@ -1,10 +1,5 @@
 .header {
   background-color: $menu-bg-color;
-  margin-bottom: 30px;
-
-  @media (min-width: 768px) {
-    margin-bottom: 0;
-  }
 }
 
 .header__menu {

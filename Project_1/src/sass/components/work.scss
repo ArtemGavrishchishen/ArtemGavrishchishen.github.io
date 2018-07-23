@@ -1,0 +1,145 @@
+.work {
+  background-color: $secondary-bg-color2;
+  padding-top: 80px;
+  padding-bottom: 60px;
+  margin-bottom: 80px;
+}
+
+.work__title {
+  position: relative;
+  font-family: $title-font;
+  font-size: 36px;
+  line-height: 42px;
+  text-transform: uppercase;
+  color: $secondary-title-color;
+  margin: 0;
+  margin-bottom: 60px;
+  padding: 0;
+  padding-left: 25px;;
+
+  &::after {
+    display: block;
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    width: 10px;
+    height: 35px;
+    background-color: $secondary-bg-color3;
+  }
+}
+
+.work__list {
+  @extend %list;
+  margin-bottom: 60px;
+
+  @media (min-width: 768px) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+}
+
+.work__item {
+  position: relative;
+
+  &:not(:last-child) {
+    margin-bottom: 30px;
+  }
+
+  &:hover .work-overlay {
+    opacity: 1;
+  }
+
+  @media (min-width: 768px) {
+    &:nth-last-child(-n + 2) {
+      margin-bottom: 0;
+    }
+  }
+
+  @media (min-width: 1200px) {
+    &:nth-last-child(-n + 3) {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.work__image {
+  margin: 0 auto;
+  @media (min-width: 768px) {
+    max-width: 340px;
+  }
+
+  @media (min-width: 1200px) {
+    max-width: 360px;
+  }
+}
+
+.work__btn {
+  display: block;
+  font-family: $title-font;
+  text-transform: uppercase;
+  font-size: 14px;
+  line-height: 28px;
+  border: 2px solid $secondary-title-color;
+  border-radius: 5px;
+  outline: 0px;
+  color: $secondary-title-color;
+  background-color: transparent;
+  cursor: pointer;
+  margin: 0 auto;
+  padding: 5px 10px;
+  transition-property: background-color, border-color;
+  transition-duration: 0.2s;
+  transition-timing-function: linear;
+
+  &:hover {
+    background-color: $accent-color;
+    border-color: $accent-color;
+  }
+}
+
+.work-overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  opacity: 0;
+  cursor: pointer;
+  transition: opacity 0.2s linear;
+}
+
+.work-overlay__popup {
+  position: relative;
+  height: 75%;
+  background-color: rgba(41, 47, 54, 0.502);
+}
+
+.work-overlay__popup svg {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  fill: $secondary-title-color;
+  transition: fill 0.2s linear;
+
+  &:hover {
+    fill: $accent-color;
+  }
+}
+
+.work-overlay__description {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 25%;
+  font-family: $text-font;
+  font-size: 18px;
+  line-height: 42px;
+  text-transform: uppercase;
+  color: $secondary-title-color;
+  background-color: $primary-title-color;
+  margin: 0;
+  padding: 12px 20px;
+}
