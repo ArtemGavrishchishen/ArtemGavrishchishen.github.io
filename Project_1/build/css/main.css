@@ -9,6 +9,7 @@
 .team__list,
 .overlay__list,
 .work__list,
+.services__list,
 .footer__list {
   margin: 0;
   padding: 0;
@@ -790,6 +791,69 @@ input[type="radio"].visually-hidden {
   background-color: #e1e6ea;
 }
 
+.services__list {
+  margin-bottom: 60px;
+}
+
+.services__item {
+  position: relative;
+  width: 260px;
+  text-align: center;
+  padding-top: 120px;
+}
+
+.services__item::before {
+  position: absolute;
+  top: 35px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
+  display: block;
+  content: "";
+  width: 50px;
+  height: 50px;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.services__item--cogs::before {
+  background-image: url(../../img/icons/cogs.svg);
+}
+
+.services__item--pencil::before {
+  background-image: url(../../img/icons/pencil.svg);
+}
+
+.services__item--mobile::before {
+  background-image: url(../../img/icons/mobile.svg);
+}
+
+.services__item--clock::before {
+  background-image: url(../../img/icons/clock.svg);
+}
+
+.services__item:not(:last-child) {
+  margin-bottom: 25px;
+}
+
+.services__definition {
+  font-family: "Quattrocento Sans", sans-serif;
+  font-size: 17px;
+  color: #292f36;
+  text-transform: uppercase;
+  margin: 0;
+  padding: 0;
+}
+
+.services__description {
+  font-family: "Open Sans", sans-serif;
+  font-size: 15px;
+  line-height: 26px;
+  color: #8d8f92;
+  margin: 0;
+  padding: 0;
+}
+
 .footer {
   background-color: #3a454d;
   padding: 35px 0;
@@ -890,6 +954,16 @@ input[type="radio"].visually-hidden {
     max-width: 340px;
   }
 
+  .services__list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+  }
+
+  .services__item:nth-last-child(-n + 2) {
+    margin-bottom: 0px;
+  }
+
   .footer__content {
     display: flex;
     justify-content: space-between;
@@ -924,10 +998,22 @@ input[type="radio"].visually-hidden {
   .work__image {
     max-width: 360px;
   }
+
+  .services__list {
+    justify-content: space-between;
+  }
+
+  .services__item:nth-last-child(-n + 4) {
+    margin-bottom: 0px;
+  }
 }
 
 @media (max-width: 767px) {
   .team__item {
     margin: 0 auto;
+  }
+
+  .services__item {
+    margin: 0px auto;
   }
 }
