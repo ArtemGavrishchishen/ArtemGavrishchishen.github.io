@@ -817,19 +817,19 @@ input[type="radio"].visually-hidden {
 }
 
 .services__item--cogs::before {
-  background-image: url(./../img/icons/cogs.svg);
+  background-image: url(../img/icons/cogs.svg);
 }
 
 .services__item--pencil::before {
-  background-image: url(./../img/icons/pencil.svg);
+  background-image: url(../img/icons/pencil.svg);
 }
 
 .services__item--mobile::before {
-  background-image: url(./../img/icons/mobile.svg);
+  background-image: url(../img/icons/mobile.svg);
 }
 
 .services__item--clock::before {
-  background-image: url(./../img/icons/clock.svg);
+  background-image: url(../img/icons/clock.svg);
 }
 
 .services__item:not(:last-child) {
