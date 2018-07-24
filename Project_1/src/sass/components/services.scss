@@ -58,19 +58,19 @@
   }
 
   &--cogs::before {
-    background-image: url(../../img/icons/cogs.svg);
+    background-image: url(./img/icons/cogs.svg);
   }
 
   &--pencil::before {
-    background-image: url(../../img/icons/pencil.svg);
+    background-image: url(./img/icons/pencil.svg);
   }
 
   &--mobile::before {
-    background-image: url(../../img/icons/mobile.svg);
+    background-image: url(./img/icons/mobile.svg);
   }
 
   &--clock::before {
-    background-image: url(../../img/icons/clock.svg);
+    background-image: url(./img/icons/clock.svg);
   }
 
   &:not(:last-child) {
