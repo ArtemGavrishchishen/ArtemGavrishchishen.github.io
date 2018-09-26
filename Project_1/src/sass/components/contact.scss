@@ -34,6 +34,7 @@
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
+  margin-bottom: 25px;
 }
 
 .contact__content {
@@ -47,9 +48,11 @@
 .contact__info, .contact__form {
   margin: 0 auto;
   max-width: 525px;
+  margin-bottom: 25px;
 
   @media (min-width: 768px) {
     width: 340px;
+    margin-bottom: 0;
   }
 
   @media (min-width: 1200px) {
@@ -62,9 +65,11 @@
   font-size: 20px;
   line-height: 26px;
   text-transform: uppercase;
+  text-align: center;
   color: $primary-title-color;
   margin: 0;
   padding: 0;
+  margin-bottom: 25px;
 }
 
 .contact__description {
@@ -82,11 +87,51 @@
 
 .contact-form {
   background-color: $secondary-title-color;
+  padding: 10px;
+
+  @media (min-width: 768px) {
+    padding: 30px;
+    position: relative;
+    top: -130px;
+  }
 }
 
 .contact-form__list {
   @extend %list;
+  margin-bottom: 30px;
 
+  @media (min-width: 768px) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+}
+
+.contact-form__item:not(:last-child) {
+  width: 100%;
+  margin-bottom: 30px;
+  @media (min-width: 768px) {
+    width: calc(50% - 8px);
+  }
+}
+
+.contact-form__item:last-child {
+  width: 100%;
+}
+
+.contact-form__item input {
+  width: 100%;
+  height: 48px;
+  background-color: #eaeef1;
+  border: none;
+}
+
+.contact-form__message {
+  width: 100%;
+  height: 160px;
+  resize: none;
+  background-color: #eaeef1;
+  border: none;
 }
 
 .contact-form__title {
@@ -98,3 +143,26 @@
   margin: 0;
 }
 
+.contact-form__btn {
+  display: block;
+  font-family: $title-font;
+  text-transform: uppercase;
+  font-size: 14px;
+  line-height: 28px;
+  border: 2px solid $accent-color;
+  border-radius: 5px;
+  outline: 0px;
+  color: $secondary-title-color;
+  background-color: $accent-color;
+  cursor: pointer;
+  margin: 0 auto;
+  padding: 5px 10px;
+  transition-property: background-color;
+  transition-duration: 0.2s;
+  transition-timing-function: linear;
+
+  &:hover {
+    color: $accent-color;
+    background-color: transparent;
+  }
+}

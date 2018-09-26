@@ -1,5 +1,4 @@
 .team {
-  padding-top: 80px;
   margin-bottom: 30px;
 
   @media (min-width: 768px) {
@@ -112,7 +111,7 @@
   height: 300px;
   top: 0;
   opacity: 0;
-  background-color: rgba(255, 255, 255, 0);
+  background-color: rgb(234, 238, 241);
   transition-property: opacity, background-color;
   transition-duration: 0.2s;
   transition-timing-function: linear;
@@ -148,4 +147,3 @@
     fill: $accent-color;
   }
 }
-

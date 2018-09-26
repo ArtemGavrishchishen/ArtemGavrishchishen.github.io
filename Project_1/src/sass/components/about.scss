@@ -1,0 +1,146 @@
+.about {
+  padding-top: 80px;
+  margin-bottom: 80px;
+
+  @media (min-width: 768px) {
+    margin-bottom: 100px;
+  }
+}
+
+.about__title {
+  position: relative;
+  font-family: $title-font;
+  font-size: 36px;
+  line-height: 42px;
+  text-transform: uppercase;
+  color: $primary-title-color;
+  margin: 0;
+  margin-bottom: 60px;
+  padding: 0;
+  padding-left: 25px;;
+
+  &::after {
+    display: block;
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    width: 10px;
+    height: 35px;
+    background-color: $secondary-bg-color1;
+  }
+}
+
+.about__content {
+  @media (min-width: 768px) {
+    display: flex;
+  }
+}
+
+.about__description {
+  font-family: $text-font;
+  font-size: 16px;
+  line-height: 26px;
+  color: $primary-text-color;
+  margin: 0;
+  padding: 0;
+  margin-bottom: 60px;
+
+  @media (min-width: 768px) {
+    margin-bottom: 0px;
+    width: 60%;
+    padding-right: 20px;
+  }
+
+  & span {
+    font-weight: 600;
+  }
+}
+
+.about__list {
+  @extend %list;
+
+  @media (min-width: 768px) {
+    width: 40%;
+  }
+}
+
+.social {
+  display: flex;
+}
+
+.social__item {
+  &:not(:last-child) {
+    margin-right: 2px;
+  }
+}
+
+.social__link {
+  @extend %link;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: $secondary-bg-color2;
+  fill: $secondary-title-color;
+  transition: fill 0.2s linear;
+
+  &:hover {
+    fill: $accent-color;
+  }
+}
+
+.advantages__item {
+  position: relative;
+  padding-left: 68px;
+
+  &:not(:last-child) {
+    margin-bottom: 30px;
+  }
+
+  &::before {
+    color: $secondary-title-color;
+    font-size: 20px;
+    font-family: $title-font;
+    position: absolute;
+    left: 0px;
+    display: block;
+    width: 50px;
+    height: 50px;
+    background-color: $accent-color;
+    text-align: center;
+    line-height: 50px;
+  }
+
+  &:nth-child(1)::before {
+    content: "01";
+  }
+
+  &:nth-child(2)::before {
+    content: "02";
+  }
+
+  &:nth-child(3)::before {
+    content: "03";
+  }
+}
+
+.advantages__title {
+  text-transform: uppercase;
+  color: $primary-title-color;
+  font-size: 18px;
+  font-family: $title-font;
+  margin: 0;
+  padding: 0;
+}
+
+.advantages__description {
+  font-family: $text-font;
+  font-size: 16px;
+  line-height: 26px;
+  color: $primary-text-color;
+  margin: 0;
+  padding: 0;
+}
