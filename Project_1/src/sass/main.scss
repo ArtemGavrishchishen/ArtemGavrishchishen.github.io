@@ -1,10 +1,17 @@
 
 @import './helpers/variables';
-@import './helpers/placeholders.scss';
+@import './helpers/placeholders';
 @import './helpers/mixins';
 @import './fonts';
 @import './normalize';
 @import './base';
+
+/*
+  Carousel
+*/
+
+@import "./owlCarousel/owl.carousel.scss";
+@import "./owlCarousel/owl.theme.default.scss";
 
 /*
   Components
@@ -18,7 +25,3 @@
 @import "./components/features";
 @import "./components/contact";
 @import "./components/footer";
-
-* {
-  // outline: 1px solid red;
-}

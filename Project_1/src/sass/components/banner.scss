@@ -1,7 +1,6 @@
 .banner {
   position: relative;
   display: none;
-  background-color: $secondary-bg-color2;
 
   @media (min-width: 768px) {
     display: block;
@@ -12,12 +11,12 @@
   @extend %list;
 }
 
-.slider__img {
-  opacity: 0.5;
+.slider__item {
+  background-color: $secondary-bg-color2;
 }
 
-.banner__pagination {
-  @extend %list;
+.slider__img {
+  opacity: 0.5;
 }
 
 .slider__description {
@@ -74,4 +73,3 @@
     border-color: $accent-color;
   }
 }
-
