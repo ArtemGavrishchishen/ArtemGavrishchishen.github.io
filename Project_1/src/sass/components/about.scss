@@ -8,26 +8,9 @@
 }
 
 .about__title {
-  position: relative;
-  font-family: $title-font;
-  font-size: 36px;
-  line-height: 42px;
-  text-transform: uppercase;
   color: $primary-title-color;
-  margin: 0;
-  margin-bottom: 60px;
-  padding: 0;
-  padding-left: 25px;;
 
   &::after {
-    display: block;
-    content: "";
-    position: absolute;
-    top: 50%;
-    left: 0;
-    transform: translateY(-50%);
-    width: 10px;
-    height: 35px;
     background-color: $secondary-bg-color1;
   }
 }
@@ -43,19 +26,19 @@
   font-size: 16px;
   line-height: 26px;
   color: $primary-text-color;
-  margin: 0;
   padding: 0;
+  margin: 0;
   margin-bottom: 60px;
 
   @media (min-width: 768px) {
-    margin-bottom: 0px;
     width: 60%;
     padding-right: 20px;
+    margin-bottom: 0px;
   }
 
   & p {
-    margin: 0;
     padding: 0;
+    margin: 0;
     margin-bottom: 10px;
   }
 
@@ -84,9 +67,9 @@
 
 .social__link {
   @extend %link;
+  display: flex;
   width: 50px;
   height: 50px;
-  display: flex;
   justify-content: center;
   align-items: center;
   background-color: $secondary-bg-color2;
@@ -107,14 +90,14 @@
   }
 
   &::before {
-    color: $secondary-title-color;
-    font-size: 20px;
-    font-family: $title-font;
     position: absolute;
     left: 0px;
     display: block;
     width: 50px;
     height: 50px;
+    color: $secondary-title-color;
+    font-size: 20px;
+    font-family: $title-font;
     background-color: $accent-color;
     text-align: center;
     line-height: 50px;
@@ -138,8 +121,8 @@
   color: $primary-title-color;
   font-size: 18px;
   font-family: $title-font;
-  margin: 0;
   padding: 0;
+  margin: 0;
 }
 
 .advantages__description {
@@ -147,6 +130,6 @@
   font-size: 16px;
   line-height: 26px;
   color: $primary-text-color;
-  margin: 0;
   padding: 0;
+  margin: 0;
 }

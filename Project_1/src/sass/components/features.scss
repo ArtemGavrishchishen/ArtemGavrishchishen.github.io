@@ -6,26 +6,9 @@
 }
 
 .features__title {
-  position: relative;
-  font-family: $title-font;
-  font-size: 36px;
-  line-height: 42px;
-  text-transform: uppercase;
   color: $secondary-title-color;
-  margin: 0;
-  margin-bottom: 60px;
-  padding: 0;
-  padding-left: 25px;;
 
   &::after {
-    display: block;
-    content: "";
-    position: absolute;
-    top: 50%;
-    left: 0;
-    transform: translateY(-50%);
-    width: 10px;
-    height: 35px;
     background-color: $secondary-bg-color3;
   }
 }
@@ -45,8 +28,8 @@
 }
 
 .features__item {
-  margin: 0 auto;
   max-width: 360px;
+  margin: 0 auto;
 
   &:not(:last-child) {
     margin-bottom: 30px;

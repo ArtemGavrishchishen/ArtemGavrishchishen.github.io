@@ -6,26 +6,9 @@
 }
 
 .work__title {
-  position: relative;
-  font-family: $title-font;
-  font-size: 36px;
-  line-height: 42px;
-  text-transform: uppercase;
   color: $secondary-title-color;
-  margin: 0;
-  margin-bottom: 60px;
-  padding: 0;
-  padding-left: 25px;;
 
   &::after {
-    display: block;
-    content: "";
-    position: absolute;
-    top: 50%;
-    left: 0;
-    transform: translateY(-50%);
-    width: 10px;
-    height: 35px;
     background-color: $secondary-bg-color3;
   }
 }
@@ -78,21 +61,10 @@
 
 .work__btn {
   display: block;
-  font-family: $title-font;
-  text-transform: uppercase;
-  font-size: 14px;
-  line-height: 28px;
   border: 2px solid $secondary-title-color;
-  border-radius: 5px;
-  outline: 0px;
-  color: $secondary-title-color;
   background-color: transparent;
-  cursor: pointer;
   margin: 0 auto;
-  padding: 5px 10px;
   transition-property: background-color, border-color;
-  transition-duration: 0.2s;
-  transition-timing-function: linear;
 
   &:hover {
     background-color: $accent-color;
@@ -140,6 +112,6 @@
   text-transform: uppercase;
   color: $secondary-title-color;
   background-color: $primary-title-color;
-  margin: 0;
   padding: 12px 20px;
+  margin: 0;
 }

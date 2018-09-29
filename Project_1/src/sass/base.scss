@@ -30,6 +30,43 @@ img {
   }
 }
 
+.section-title {
+  position: relative;
+  font-family: $title-font;
+  font-size: 36px;
+  line-height: 42px;
+  text-transform: uppercase;
+  padding: 0;
+  margin: 0;
+  padding-left: 25px;;
+  margin-bottom: 60px;
+
+  &::after {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    display: block;
+    content: "";
+    width: 10px;
+    height: 35px;
+  }
+}
+
+.btn {
+  font-family: $title-font;
+  text-transform: uppercase;
+  font-size: 14px;
+  line-height: 28px;
+  color: $secondary-title-color;
+  border-radius: 5px;
+  outline: 0px;
+  cursor: pointer;
+  padding: 5px 10px;
+  transition-duration: 0.2s;
+  transition-timing-function: linear;
+}
+
 .visually-hidden:not(:focus):not(:active),
 input[type="checkbox"].visually-hidden,
 input[type="radio"].visually-hidden {
