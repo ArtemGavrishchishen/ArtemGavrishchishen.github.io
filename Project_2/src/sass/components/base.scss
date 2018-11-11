@@ -10,8 +10,8 @@ html {
 
 img {
   display: block;
-  width: auto;
-  max-height: 100%;
+  max-width: 100%;
+  height: auto;
 }
 
 %link {
@@ -38,108 +38,5 @@ img {
 
   @media (min-width: 1024px) {
     max-width: 900px;
-  }
-}
-
-.header {
-  background-color: #649B5C;
-  padding: 25px 0px;
-  margin-bottom: 20px;
-
-  @media (max-width: 480px) {
-    text-align: center;
-  }
-}
-
-.header__logo {
-  @extend %link;
-  text-transform: uppercase;
-  color: #ffffff;
-}
-
-.card > div {
-    position: relative;
-}
-
-.card__filter {
-  display: none;
-
-  @media (min-width: 768px) {
-    display: block;
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    width: 210px;
-    border: 1px solid black; // dell
-  }
-}
-
-.card__filter--active {
-
-  @media (max-width: 767px) {
-    display: block;
-    position: absolute;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
-    border: 1px solid black; // dell
-    background-color: rgba(10, 10, 10, 0.5);
-  }
-}
-
-.card__list {
-  @extend %list;
-
-  @media (min-width: 480px) {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: flex-start;
-  }
-
-  @media (min-width: 768px) {
-    padding-left: 230px;
-  }
-}
-
-.card__item {
-  width: 210px;
-  margin: 0 auto;
-  height: 200px; // dell
-  border: 1px solid black; // dell
-
-  &:not(:last-child) {
-    margin-bottom: 20px;
-  }
-
-  @media (min-width: 480px) {
-    margin: 0;
-
-    &:not(:nth-child(2n)) {
-      margin-right: 20px;
-    }
-
-    &:nth-last-child(-n + 2) {
-      margin-bottom: 0;
-    }
-  }
-
-  @media (min-width: 768px) {
-    margin: 0;
-
-  }
-
-  @media (min-width: 1024px) {
-    margin: 0;
-
-    &:not(:nth-child(2n)) {
-      margin-right: 0;
-    }
-    &:not(:nth-child(3n)) {
-      margin-right: 20px;
-    }
-    &:nth-last-child(-n + 3) {
-      margin-bottom: 0px;
-    }
   }
 }

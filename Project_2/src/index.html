@@ -12,27 +12,32 @@
       <div class="container">
         <a href="#" class="header__logo">logotype</a>
 
+        <a href="#" class="header__filter">
+          <ul class="b-burger">
+            <li class="b-burger__icon"></li>
+            <li class="b-burger__icon"></li>
+            <li class="b-burger__icon"></li>
+          </ul>
+        </a>
       </div>
     </header>
 
     <main class="main">
       <section class="card">
         <div class="container">
-          <form class="card__filter"></form>
+          <form class="card__filter filter">
+            <div class="filter__price"></div>
+            <ul class="filter__btn-list">
+              <li>
+                <button class="filter__btn filter__btn--reset">Reset</button>
+              </li>
+              <li>
+                <button class="filter__btn filter__btn--submit">Filter</button>
+              </li>
+            </ul>
+          </form>
 
-          <ul class="card__list">
-            <li class="card__item"></li>
-            <li class="card__item"></li>
-            <li class="card__item"></li>
-            <li class="card__item"></li>
-            <li class="card__item"></li>
-            <li class="card__item"></li>
-            <li class="card__item"></li>
-            <li class="card__item"></li>
-            <li class="card__item"></li>
-            <li class="card__item"></li>
-            <!-- <li class="card__item"></li> -->
-          </ul>
+          <ul class="card__list"></ul>
         </div>
       </section>
     </main>
