@@ -1,5 +1,14 @@
 <li class="card__item">
-  <img src="../img/{{img}}" alt="{{name}}">
-  <h4>{{name}}</h4>
-  <p>Цена: {{price}} грн.</p>
+  <img class="card__img" src="../img/{{img}}" alt="{{model}}">
+  <div class="card__body">
+    <h4 class="card__title">{{brand}} {{model}}</h4>
+    <div><strong>Проц.:</strong>
+      <br />{{processor}} {{cores}}
+    </div>
+    <div><strong>Экран:</strong>
+      <br />{{size}}" {{screen}}
+    </div>
+    <div><strong>ОЗУ: </strong>{{memory}}</div>
+    <div><strong>ПЗУ: </strong>{{mediaType}} {{hddCapacity}}</div>
+  </div>
 </li>
