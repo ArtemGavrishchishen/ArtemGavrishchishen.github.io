@@ -1,0 +1,12 @@
+{{#each this}}
+<section class="filter__{{@key}} filter__section">
+  <h3 class="filter__title">{{@key}}</h3>
+  <ul class="filter__list">
+    {{#each this}}
+    <li>
+      <label><input type="checkbox" name="{{@../key}}" value="{{this}}">{{this}}"</label>
+    </li>
+    {{/each}}
+  </ul>
+</section>
+{{/each}}

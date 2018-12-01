@@ -1,7 +1,7 @@
-import template from "./../templates/card.hbs";
+import templateCard from './../templates/card.hbs';
+import templateFilter from './../templates/filter.hbs';
 
 export default class View {
-
   constructor() {
     this.refs = {};
 
@@ -15,16 +15,24 @@ export default class View {
     this.refs.cardFilter.classList.toggle('card__filter--active');
   }
 
-  init(data) {
-    const markup = data.reduce((acc, item) => {
+  init(data, dataFilter) {
+    const markupCard = data.reduce((acc, item) => {
       return acc + this.createCard(item);
     }, '');
-    this.refs.cards.innerHTML = markup;
+
+    const markupFilter = this.createFilter(dataFilter);
+
+    this.refs.cards.innerHTML = markupCard;
+    this.refs.cardFilter.insertAdjacentHTML('afterbegin', markupFilter);
   }
 
   createCard(item) {
-    const markup = template(item);
+    const markup = templateCard(item);
     return markup;
   }
 
+  createFilter(item) {
+    const markup = templateFilter(item);
+    return markup;
+  }
 }

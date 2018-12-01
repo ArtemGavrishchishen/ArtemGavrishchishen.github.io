@@ -2,12 +2,14 @@
   display: none;
 
   @media (min-width: 768px) {
-    display: block;
     position: absolute;
     top: 0;
     bottom: 0;
+    display: block;
     width: 210px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    padding: 0 10px;
+    padding-top: 10px;
   }
 }
 
@@ -21,13 +23,27 @@
     right: 0;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
     background-color: rgba(10, 10, 10, 0.5);
+    color: #ffffff;
+    padding-left: 75px;
   }
 }
 
-.filter__btn-list {
+.filter__section {
+  margin-bottom: 15px;
+}
+
+.filter__title {
+  text-transform: uppercase;
+  margin: 0;
+}
+
+.filter__list {
   @extend %list;
-  display: flex;
-  justify-content: space-around;
+
+  &--btn {
+    display: flex;
+    justify-content: space-around;
+  }
 }
 
 .filter__btn {
