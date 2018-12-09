@@ -23,8 +23,16 @@
     right: 0;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
     background-color: rgba(10, 10, 10, 0.5);
+  }
+}
+
+.modal-wrap {
+  @media (max-width: 767px) {
+    max-width: 460px;
+    padding: 25px 50px;
+    margin: 0 auto;
+    background-color: rgba(10, 10, 10, 0.5);
     color: #ffffff;
-    padding-left: 75px;
   }
 }
 

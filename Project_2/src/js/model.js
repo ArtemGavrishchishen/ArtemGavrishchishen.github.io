@@ -3,7 +3,7 @@ import * as api from './data.js';
 export default class Model {
   constructor(data = []) {
     this.data = data;
-    this.dataFilter = {};
+    this.formFilter = {};
 
     this.init();
   }
@@ -14,7 +14,7 @@ export default class Model {
 
       for (let key in this.data[0]) {
         if (key === 'img') continue;
-        this.dataFilter[key] = this.data
+        this.formFilter[key] = this.data
           .map(item => item[key])
           .filter((x, i, a) => a.indexOf(x) == i);
       }
@@ -26,6 +26,19 @@ export default class Model {
   }
 
   getDataFilter() {
-    return this.dataFilter;
+    return this.formFilter;
+  }
+
+  getFilteredItems({ brand, model, processor }) {
+    const items = this.data;
+
+    const filteredItems = items.filter(
+      item =>
+        brand.includes(item.brand) &&
+        model.includes(item.model) &&
+        processor.includes(item.processor)
+    );
+
+    return filteredItems;
   }
 }

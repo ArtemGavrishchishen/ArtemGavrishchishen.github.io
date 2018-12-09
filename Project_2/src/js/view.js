@@ -8,6 +8,9 @@ export default class View {
     this.refs.headerFilterLink = document.querySelector('.header__filter');
     this.refs.cardFilter = document.querySelector('.card__filter');
     this.refs.cards = document.querySelector('.card__list');
+    this.refs.cardFilterContent = this.refs.cardFilter.querySelector('.modal-wrap');
+    this.refs.submitForm = document.querySelector('.js-filter-submit');
+    this.refs.resetForm = document.querySelector('.js-filter-reset');
   }
 
   toggleCardFilter() {
@@ -23,7 +26,14 @@ export default class View {
     const markupFilter = this.createFilter(dataFilter);
 
     this.refs.cards.innerHTML = markupCard;
-    this.refs.cardFilter.insertAdjacentHTML('afterbegin', markupFilter);
+    this.refs.cardFilterContent.insertAdjacentHTML('afterbegin', markupFilter);
+  }
+
+  createFilteredCard(data) {
+    const markupCard = data.reduce((acc, item) => {
+      return acc + this.createCard(item);
+    }, '');
+    this.refs.cards.innerHTML = markupCard;
   }
 
   createCard(item) {

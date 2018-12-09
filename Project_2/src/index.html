@@ -26,14 +26,18 @@
       <section class="card">
         <div class="container">
           <form class="card__filter filter">
-            <ul class="filter__list filter__list--btn">
-              <li>
-                <button class="filter__btn filter__btn--reset">Reset</button>
-              </li>
-              <li>
-                <button class="filter__btn filter__btn--submit">Filter</button>
-              </li>
-            </ul>
+            <div class="modal-wrap">
+              <ul class="filter__list filter__list--btn">
+                <li>
+                  <button class="filter__btn js-filter-reset">Reset</button>
+                </li>
+                <li>
+                  <button class="filter__btn js-filter-submit">
+                    Filter
+                  </button>
+                </li>
+              </ul>
+            </div>
           </form>
 
           <ul class="card__list"></ul>
