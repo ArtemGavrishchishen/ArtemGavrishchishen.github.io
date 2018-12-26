@@ -9,8 +9,7 @@ export default class View {
     this.refs.cardFilter = document.querySelector('.card__filter');
     this.refs.cards = document.querySelector('.card__list');
     this.refs.cardFilterContent = this.refs.cardFilter.querySelector('.modal-wrap');
-    this.refs.submitForm = document.querySelector('.js-filter-submit');
-    this.refs.resetForm = document.querySelector('.js-filter-reset');
+    this.refs.formFilter = document.querySelector('.filter');
   }
 
   toggleCardFilter() {

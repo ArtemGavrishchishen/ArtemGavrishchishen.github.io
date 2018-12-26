@@ -8,9 +8,14 @@ export default class Controller {
       this.handleOpenFilter.bind(this)
     );
 
-    this._view.refs.submitForm.addEventListener(
-      'click',
+    this._view.refs.formFilter.addEventListener(
+      'submit',
       this.handleSubmitFormFilter.bind(this)
+    );
+
+    this._view.refs.formFilter.addEventListener(
+      'reset',
+      this.handleResetFormFilter.bind(this)
     );
 
     this.init();
@@ -20,8 +25,7 @@ export default class Controller {
     this._view.init(this._model.getData(), this._model.getDataFilter());
   }
 
-  handleOpenFilter(e) {
-    e.preventDefault();
+  handleOpenFilter() {
     this._view.toggleCardFilter();
   }
 
@@ -30,14 +34,33 @@ export default class Controller {
     const filteredData = this.createFilteredData(this._model.formFilter);
 
     this._view.createFilteredCard(this._model.getFilteredItems(filteredData));
+
+    if(this._view.refs.headerFilterLink.classList.contains('header__filter--active')) {
+      this.handleOpenFilter()
+    }
+  }
+
+  handleResetFormFilter() {
+    this._view.createFilteredCard(this._model.getData());
+
+    if(this._view.refs.headerFilterLink.classList.contains('header__filter--active')) {
+      this.handleOpenFilter()
+    }
   }
 
   createFilteredData(formFilter) {
     const filteredData = {};
 
     for (let key in formFilter) {
-      const arrCheck = Array.from(this._view.refs.cardFilter.querySelectorAll('input[name=' + key + ']:checked'));
-      filteredData[key] = arrCheck.length === 0 ? formFilter[key] : arrCheck.map(item => item.value);
+      const arrCheck = Array.from(
+        this._view.refs.cardFilter.querySelectorAll(
+          'input[name=' + key + ']:checked'
+        )
+      );
+      filteredData[key] =
+        arrCheck.length === 0
+          ? formFilter[key]
+          : arrCheck.map(item => item.value);
     }
 
     return filteredData;

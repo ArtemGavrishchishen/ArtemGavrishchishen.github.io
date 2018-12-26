@@ -44,7 +44,7 @@ export const data = [
     screen: 'WXGA (1366x768)',
     memory: '4 ГБ ',
     mediaType: 'HDD ',
-    hddCapacity: '1 ТБ',
+    hddCapacity: '1000 ГБ',
     img: 'asus.jpg'
   },
   {
@@ -212,7 +212,7 @@ export const data = [
     screen: 'WUXGA (1920x1080)',
     memory: '6 ГБ',
     mediaType: 'HDD ',
-    hddCapacity: '1 ТБ',
+    hddCapacity: '1000 ГБ',
     img: 'hp.jpg'
   },
   {
@@ -224,7 +224,7 @@ export const data = [
     screen: 'WUXGA (1920x1080)',
     memory: '12 ГБ',
     mediaType: 'HDD ',
-    hddCapacity: '1 ТБ',
+    hddCapacity: '1000 ГБ',
     img: 'hp.jpg'
   },
   {

@@ -29,16 +29,14 @@ export default class Model {
     return this.formFilter;
   }
 
-  getFilteredItems({ brand, model, processor }) {
-    const items = this.data;
+  getFilteredItems(filteredItems) {
+    let dataItems = this.data.slice(0);
 
-    const filteredItems = items.filter(
-      item =>
-        brand.includes(item.brand) &&
-        model.includes(item.model) &&
-        processor.includes(item.processor)
-    );
-
-    return filteredItems;
+    for (let key in filteredItems) {
+      const arr = filteredItems[key];
+      const filters = dataItems.filter(item => arr.includes(item[key]));
+      dataItems = filters;
+    }
+    return dataItems;
   }
 }
